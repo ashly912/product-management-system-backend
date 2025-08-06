@@ -13,11 +13,11 @@ public class ProductMapper {
         productDto.setPrice(product.getPrice());
 
         if(product.getCategory() != null) {
-            productDto.setCategoryName(product.getCategory().getCategoryName());
+            productDto.setCategoryName(product.getCategory().getName());
         }
 
         if(product.getSupplier() != null) {
-            productDto.setBrand(product.getSupplier().getBrand());
+            productDto.setSupplierName(product.getSupplier().getName());
         }
         return productDto;
     }
@@ -30,7 +30,7 @@ public class ProductMapper {
         if(productDto.getCategoryName() != null) {
             product.setCategory(category);
         }
-        if(productDto.getBrand() != null) {
+        if(productDto.getSupplierName() != null) {
             product.setSupplier(supplier);
         }
         return product;

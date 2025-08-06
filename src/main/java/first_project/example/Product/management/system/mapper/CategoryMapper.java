@@ -7,14 +7,14 @@ public class CategoryMapper {
     public static CategoryDto mapToCategoryDto(Category category) {
         return new CategoryDto(
              category.getId(),
-             category.getCategoryName()
+             category.getName()
 
         );
     }
 
    public static Category mapToCategory(CategoryDto categoryDto) {
         Category category = new Category();
-        category.setCategoryName(categoryDto.getCategoryName());
+        category.setName(categoryDto.getName());
         return category;
    }
 }

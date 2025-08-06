@@ -7,7 +7,7 @@ public class SupplierMapper {
     public static SupplierDto mapToSupplierDto(Supplier supplier) {
         return new SupplierDto(
                 supplier.getId(),
-                supplier.getBrand(),
+                supplier.getName(),
                 supplier.getEmail(),
                 supplier.getPhone()
                 );
@@ -15,7 +15,7 @@ public class SupplierMapper {
 
     public static Supplier mapToSupplier(SupplierDto supplierDto) {
        Supplier supplier = new Supplier();
-       supplier.setBrand(supplierDto.getBrand());
+       supplier.setName(supplierDto.getName());
        supplier.setEmail(supplierDto.getEmail());
        supplier.setPhone(supplierDto.getPhone());
        return supplier;
