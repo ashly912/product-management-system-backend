@@ -21,6 +21,7 @@ public class CategoryService {
     CategoryRepository categoryRepository;
 
     public CategoryDto addCategory(CategoryDto categoryDto) {
+        //map to category method
         Category category = CategoryMapper.mapToCategory(categoryDto);
         category.setName(categoryDto.getName());
         categoryRepository.save(category);

@@ -52,7 +52,7 @@ public class ProductService {
     public ProductDto updateProduct(Long id, ProductDto productDto) {
         Product product = productRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("the product with id: " + id + " does not exist"));
-        product.setName(productDto.getProductName());
+        product.setProductName(productDto.getProductName());
         product.setPrice(productDto.getPrice());
 
         Category category = categoryService.findCategoryByName(productDto.getCategoryName());

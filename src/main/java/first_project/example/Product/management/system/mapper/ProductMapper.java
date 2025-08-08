@@ -9,7 +9,7 @@ public class ProductMapper {
     public static ProductDto mapProductToProductDto(Product product) {
         ProductDto productDto = new ProductDto();
         productDto.setId(product.getId());
-        productDto.setProductName(product.getName());
+        productDto.setProductName(product.getProductName());
         productDto.setPrice(product.getPrice());
 
         if(product.getCategory() != null) {
@@ -25,7 +25,7 @@ public class ProductMapper {
     public static Product mapProductDtoToProduct(ProductDto productDto,Category category,Supplier supplier) {
         Product product = new Product();
         product.setPrice(productDto.getPrice());
-        product.setName(productDto.getProductName());
+        product.setProductName(productDto.getProductName());
 
         if(productDto.getCategoryName() != null) {
             product.setCategory(category);
